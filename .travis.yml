@@ -1,0 +1,13 @@
+language: objective-c
+osx_image: xcode10.2
+cache: cocoapods
+
+before_install:
+  - rvm use system
+  - sudo gem install cocoapods
+  - pod repo update
+
+script:
+- set -o pipefail
+- xcodebuild clean build test -workspace StreamChat.xcworkspace -scheme StreamChat -configuration Debug | xcpretty
+
