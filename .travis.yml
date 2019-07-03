@@ -9,5 +9,5 @@ before_install:
 
 script:
 - set -o pipefail
-- xcodebuild clean build test -workspace StreamChat.xcworkspace -scheme StreamChat -configuration Debug | xcpretty
+- xcodebuild clean build test -allowProvisioningUpdates -workspace StreamChat.xcworkspace -scheme StreamChat -configuration Debug | xcpretty
 
