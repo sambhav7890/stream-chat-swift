@@ -9,5 +9,5 @@ before_install:
 
 script:
 - set -o pipefail
-- xcodebuild clean build test -allowProvisioningUpdates -workspace StreamChat.xcworkspace -scheme StreamChat -configuration Debug CODE_SIGNING_REQUIRED=NO | xcpretty
+- xcodebuild clean build test -allowProvisioningUpdates -workspace StreamChat.xcworkspace -scheme StreamChat -configuration Debug -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGNING_REQUIRED=NO | xcpretty
 
